@@ -178,7 +178,6 @@ TARGET_SYSTEM_PROP += \
     $(DEVICE_PATH)/ril.prop
 
 # Qualcomm support
-BOARD_USES_QC_TIME_SERVICES := true
 BOARD_USES_QCOM_HARDWARE := true
 
 # Shims
