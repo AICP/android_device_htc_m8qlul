@@ -6,7 +6,7 @@
   },
   {
     "repository": "M8s-dev/proprietary_vendor_m8s",
-    "target_path": "vendor/htc",
+    "target_path": "vendor/htc/m8qlul",
     "branch":      "lineage-15.1"
   },
   {
