@@ -289,7 +289,7 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-service \
     com.android.nfc_extras \
     NfcNci \
-    nfc_nci.msm8916 \
+    SecureElement \
     Tag
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -301,7 +301,11 @@ endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf \
-    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/prebuilts/nfc/lib/nfc_nci.msm8916.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/nfc_nci.msm8916.so \
+    $(LOCAL_PATH)/prebuilts/nfc/lib64/nfc_nci.msm8916.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/nfc_nci.msm8916.so \
+    $(LOCAL_PATH)/prebuilts/nfc/lib/android.hardware.nfc@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.nfc@1.0-impl.so \
+    $(LOCAL_PATH)/prebuilts/nfc/lib64/android.hardware.nfc@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.nfc@1.0-impl.so
 
 # Qualcomm
 PRODUCT_COPY_FILES += \

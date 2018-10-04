@@ -143,10 +143,6 @@ endif
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# NFC
-BOARD_NFC_CHIPSET := pn547
-BOARD_NFC_HAL_SUFFIX := msm8916
-
 # Offmode Charging
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
