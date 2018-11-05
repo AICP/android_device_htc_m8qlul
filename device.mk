@@ -184,10 +184,6 @@ PRODUCT_PACKAGES += \
     org.simalliance.openmobileapi \
     org.simalliance.openmobileapi.xml
 
-# Gestures
-PRODUCT_PACKAGES += \
-    GestureHandler
-
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
