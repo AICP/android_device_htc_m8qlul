@@ -29,7 +29,7 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(INSTAL
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(INSTALLED_DTIMAGE_TARGET) \
 		$(recovery_uncompressed_ramdisk) \
 		$(recovery_kernel)
-	$(hide) rm -f $(OUT)/ramdisk-recovery.cpio.lzma
+	$(hide) rm -f $(OUT_DIR)/ramdisk-recovery.cpio.lzma
 	@echo -e ${CL_CYN}"Compressing recovery ramdisk..."${CL_RST}
 	$(hide) $(LZMA) -z -9 $(recovery_uncompressed_ramdisk)
 	$(hide) cp $(recovery_uncompressed_ramdisk).lzma $(recovery_ramdisk)
