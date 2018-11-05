@@ -12,10 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# The gps config appropriate for this device
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 # Inherit the vendor files
 $(call inherit-product-if-exists, vendor/htc/m8qlul/m8qlul-vendor.mk)
