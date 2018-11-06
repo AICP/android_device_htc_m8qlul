@@ -171,10 +171,6 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
-
 # SIM stuff existent on stock
 PRODUCT_PACKAGES += \
     requestsync \
