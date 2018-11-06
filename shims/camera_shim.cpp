@@ -14,9 +14,16 @@
  * limitations under the License.
  */
 
+#include <gui/SurfaceComposerClient.h>
+
 #include <string>
 
-//namespace android {
+using android::sp;
+using android::IBinder;
+using android::IGraphicBufferProducer;
+using android::SurfaceComposerClient;
+
+android::SurfaceComposerClient::Transaction *t = nullptr;
 
 // GraphicBuffer(uint32_t inWidth, uint32_t inHeight, PixelFormat inFormat,
 //               uint32_t inUsage, std::string requestorName = "<Unknown>");
@@ -31,17 +38,13 @@ extern "C" void _ZN7android13GraphicBufferC1Ejjij(
       inWidth, inHeight, inFormat, inUsage, requestorName);
 }
 
-extern "C" void _ZN7android21SurfaceComposerClient17setDisplaySurfaceERKNS_2spINS_7IBinderEEENS1_INS_22IGraphicBufferProducerEEE(
-		    uint32_t token, uint32_t bufferProducer);
-//    const sp<IBinder>& token, sp<IGraphicBufferProducer> bufferProducer);
-
-
 extern "C" void _ZN7android21SurfaceComposerClient17setDisplaySurfaceERKNS_2spINS_7IBinderEEERKNS1_INS_22IGraphicBufferProducerEEE(
-        uint32_t token, uint32_t bufferProducer) {
+        const sp<IBinder>& token, const sp<IGraphicBufferProducer>& bufferProducer) {
 //    const sp<IBinder>& token, const sp<IGraphicBufferProducer>& bufferProducer) {
-   _ZN7android21SurfaceComposerClient17setDisplaySurfaceERKNS_2spINS_7IBinderEEENS1_INS_22IGraphicBufferProducerEEE(
-                token, bufferProducer);
+    t->setDisplaySurface(token, bufferProducer);
 }
+
+
 // asInterface(const sp<IBinder>& obj);
 extern "C" void _ZN7android14CameraMetadata14getTagFromNameEPKcPKNS_19VendorTagDescriptorEPj();
 
