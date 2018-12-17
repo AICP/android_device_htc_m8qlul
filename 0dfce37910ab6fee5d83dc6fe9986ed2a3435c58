@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7620a3b4_88993492",
+        "filename": "aicp.dependencies",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1375
+      },
+      "writtenOn": "2018-12-17T13:51:00Z",
+      "side": 0,
+      "message": "don\u0027t delete, just take AICP as source",
+      "range": {
+        "startLine": 23,
+        "startChar": 3,
+        "endLine": 23,
+        "endChar": 59
+      },
+      "revId": "0dfce37910ab6fee5d83dc6fe9986ed2a3435c58",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e5f7497b_e1b3d472",
+        "filename": "aicp.dependencies",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1375
+      },
+      "writtenOn": "2018-12-17T13:51:00Z",
+      "side": 0,
+      "message": "don\u0027t delete, just select 16.0 as revision",
+      "range": {
+        "startLine": 28,
+        "startChar": 2,
+        "endLine": 28,
+        "endChar": 72
+      },
+      "revId": "0dfce37910ab6fee5d83dc6fe9986ed2a3435c58",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
