@@ -31,8 +31,7 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(INSTALLED_DTIMAGE_TARGET) \
 		$(recovery_kernel)
 	$(hide) rm -f $(OUT_DIR)/ramdisk-recovery.cpio.lzma
 	@echo -e ${CL_CYN}"Compressing recovery ramdisk..."${CL_RST}
-	$(hide) $(LZMA) -z -9 $(recovery_uncompressed_ramdisk)
-	$(hide) cp $(recovery_uncompressed_ramdisk).lzma $(recovery_ramdisk)
+	$(hide) cp $(recovery_uncompressed_ramdisk) $(recovery_ramdisk)
 
 	@echo -e ${CL_CYN}"----- Making recovery image ------"${CL_RST}
 	$(hide) $(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) --dt $(INSTALLED_DTIMAGE_TARGET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET) --output $@
