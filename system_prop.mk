@@ -70,7 +70,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     ro.opengles.version=196608 \
     ro.sf.lcd_density=420 \
-    debug.composition.type=gpu \
     debug.enable.sglscale=1
 
 # GPS
