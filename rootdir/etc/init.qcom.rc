@@ -53,6 +53,8 @@ on init
     
     chmod 0644 /proc/cmdline/
 
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
+
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
