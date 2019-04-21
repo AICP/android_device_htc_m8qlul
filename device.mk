@@ -22,11 +22,7 @@ $(call inherit-product-if-exists, vendor/htc/m8qlul/m8qlul-vendor.mk)
 -include $(LOCAL_PATH)/system_prop.mk
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay \
-                           $(LOCAL_PATH)/overlay-lineage
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Screen density
 # Device uses ultra-high-density artwork where available
@@ -205,7 +201,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/flp.conf:system/vendor/etc/flp.conf \
     $(LOCAL_PATH)/gps/etc/izat.conf:system/vendor/etc/izat.conf
 
-
 # IRQ balance
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
@@ -256,7 +251,7 @@ PRODUCT_PACKAGES += \
     liblog_shim \
     libhlg
 
-# RIL  
+# RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0-impl \
     libshim_ril
@@ -264,7 +259,7 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@1.0-service-legacymm
- 
+
 # Media config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
