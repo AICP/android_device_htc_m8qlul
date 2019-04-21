@@ -109,9 +109,6 @@ endif
 # Extended filesystem support
 TARGET_EXFAT_DRIVER := sdfat
 
-# Fonts
-EXTENDED_FONT_FOOTPRINT := true
-
 # GPS
 TARGET_GPS_HAL_PATH := $(DEVICE_PATH)/gps
 
